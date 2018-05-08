@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+
+
+    <script>
+var n = localStorage.getItem('counter');
+if (n == null) {
+    n = 0;
+} else {
+    n++;
+}
+localStorage.setItem("counter", n);
+</script>
+</head>
+<body onLoad ="onLoad()">
+<input type="text" id="nameBox" value="" placeholder="What is your Name?">
+<button onClick="myFunction()">Save</button>
+<button onClick="addRadical()">&#8730;</button>
+<div id="result"></div>
+<script>
+function myFunction(){
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", document.getElementById("nameBox").value);
+    // Retrieve
+    document.getElementById("result").innerHTML = "Hello " + localStorage.getItem("lastname")+"!";
+}
+}
+function onLoad(){
+    if ("lastname" in localStorage){
+        document.getElementById("result").innerHTML = "Welcome back, " + localStorage.getItem("lastname") + ". You have visited the page " + localStorage.getItem("counter") + " times.";
+    }
+}
+function addRadical(){
+    document.getElementById("nameBox").value += '√';
+}
+</script>
+</body>
+</html>
