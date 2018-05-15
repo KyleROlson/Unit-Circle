@@ -1,0 +1,136 @@
+<html>
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    
+    <title>Unit Circle</title>
+</head>    
+    <body onLoad="nextQuestion()">
+     <audio id="myAudio">
+  <source src="khan.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+       <header><a href="menu.html"><img src="images/arrow.png"></a><div id="timer"><span id="points">0 pts&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="minutes"></span>:<span id="seconds"></span></div></header>
+          
+          
+           <div id="question">
+ 
+           </div>
+          
+           <img id="next" onclick="nextQuestion();" src="images/next.png" align="right">
+           
+           
+           <script type="text/javascript">
+           var url_string = window.location.href;
+           var url = new URL(url_string);
+           var c = url.searchParams.get("khanSound");
+           
+           
+        //Clock
+        var i = 0;
+         var sec = 0;
+         var pointValue = 0;
+    function pad ( val ) { return val > 9 ? val : "0" + val; }
+    var timer = setInterval( function(){
+        document.getElementById("seconds").innerHTML=pad(++sec%60);
+        document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
+    }, 1000);
+    
+    function getRandomArray(min,max){
+    var A= [];
+    while(max>= min) A.push(max--)    
+
+    A.sort(function(){return .5- Math.random()});  
+		this.A = A;
+    return A;
+   
+}
+   
+    getRandomArray(0,15);
+    var x = document.getElementById("myAudio");
+        //Detects correct answer
+        function correct(element){
+        element.style.backgroundImage = "url('images/blue.png')";
+        pointValue = pointValue + 10;
+        document.getElementById("points").innerHTML=(parseInt(pointValue)+"pts&nbsp;&nbsp;&nbsp;&nbsp;");
+        if(c == 1){
+        x.play(); }
+        element.onclick = function() {myFunction()};
+
+        
+    }
+    //Detects Incorrrect Answer
+    function incorrect(element){
+        element.style.backgroundImage = "url('images/red.png')";
+        document.getElementById("correctAnswer").onclick = function() {
+         document.getElementById("correctAnswer").style.backgroundImage = "url('images/blue.png')";
+         
+        };
+        
+    }
+    document.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+      nextQuestion();
+    }
+});
+    function nextQuestion(){
+     i++;
+    if (A[i] == 0){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/0.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>0</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/0</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+   
+    if (A[i] == 1){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/30.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/5</div> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>4&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>5&#960;/3</div></center>";} 
+    
+    if (A[i] == 2){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/45.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/2</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>5&#960;/4</div><br><br><div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/4</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/2</div></center>";} 
+    
+    if (A[i] == 3){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/60.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>6&#960;/5</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/3</div></center>";} 
+    
+    if (A[i] == 4){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/90.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/2</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;</div></center>";} 
+    
+    if (A[i] == 5){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/120.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/4</div> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>2&#960;/3</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/2</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>4&#960;/3</div></center>";} 
+    
+    if (A[i] == 6){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/135.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>5&#960;/6</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><br><br><div class='choice' id='correctAnswer' onclick='correct(this);'><br>3&#960;/4</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>7&#960;/4</div></center>";} 
+    
+    if (A[i] == 7){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/150.png'><br><br><br><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/4</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;</div><div class='choice' id='correctAnswer' onclick='correct(this);'><br>5&#960;/6</div></center>";} 
+    
+    if (A[i] == 8){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/180.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 9){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/210.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 10){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/240.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 11){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/270.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 12){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/300.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 13){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/315.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 14){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/330.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+    
+    if (A[i] == 15){
+     document.getElementById("question").innerHTML="<center><img src='images/degrees/360.png'><br><br><br><br> <div class='choice' id='correctAnswer' onclick='correct(this);'><br>&#960;/365</div> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>&#960;/6</div><br><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>2&#960;/3</div><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>3&#960;/2</div></center>";} 
+     if (i == 16){
+     document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
+     document.getElementById("next").style.visibility = "hidden";
+     clearInterval(timer);
+    }
+     }
+    </script>
+       </body>
+</html>

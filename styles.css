@@ -1,7 +1,16 @@
 @font-face {
-font-family: HandWritten;
-src: url(fonts/Cheveuxdange.ttf);
+    font-family: 'Cheveuxdange';
+    src: url('Cheveuxdange.eot');
+    src: url('Cheveuxdange.eot?#iefix') format('embedded-opentype'),
+        url('Cheveuxdange.woff2') format('woff2'),
+        url('Cheveuxdange.woff') format('woff'),
+        url('Cheveuxdange.ttf') format('truetype'),
+        url('Cheveuxdange.svg#Cheveuxdange') format('svg');
+    font-weight: 500;
+    font-style: normal;
 }
+
+
 
 header{
     height: 20%;
@@ -46,9 +55,8 @@ footer{
     position: absolute;
     right: 3%;
     top: 0%;
-    font-family: Impact;
+    font-family: Cheveuxdange;
     font-size: 200%;
-    color: grey;
 }
 
 .choice{
@@ -66,20 +74,18 @@ footer{
   font-size: 225%;
   
 }
+.endScreen{
+    font-family: Cheveuxdange;
+}
 
 
 
-
-@media screen and (-webkit-min-device-pixel-ratio:1.1) {
+/*@media screen and (-webkit-min-device-pixel-ratio:1.1) {
     _:-webkit-full-screen, .selector { property:value; } 
     
     
     
-    
-@font-face {
-font-family: HandWritten;
-src: url(fonts/Cheveuxdange.ttf);
-}
+
 
 header{
     height: 20%;
@@ -140,6 +146,8 @@ footer{
     height: 60%;
     position: absolute
 }
+
+
 
 
 }
