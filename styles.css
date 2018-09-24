@@ -81,9 +81,9 @@ footer{
   width:75%;
   border-radius: 20%;
   display: inline-block;
-  font-family: Tequila;
+  font-family: Impact;
   color: white;
-  font-size: 355%;
+  font-size: 225%;
   
 }
 #menuItem{
@@ -125,15 +125,14 @@ a{
    font-family: Cheveuxdange;
 }
 .question{
-    font-size: 550%;
+    font-size: 650%;
     margin-top: -90;
     margin-bottom: 0;
-    font-family: Tequila;
+    font-family: Cheveuxdange,Tequila;
 }
 .questionRadian{
-    font-size: 550%;
+    font-size: 650%;
     margin-top: -110;
     margin-bottom: -50;
-    font-family: Tequila;
+    font-family: Cheveuxdange,Tequila;
 }
-
