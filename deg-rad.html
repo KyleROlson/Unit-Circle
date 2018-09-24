@@ -22,22 +22,22 @@
            <script type="text/javascript">
                var items = [
 ["0°", "0", "π/3", "π/6"],
-["30°", "π/6", "π/2", "7π/6"],
-["45°", "0", "π/3", "π/6"],
-["60°", "0", "π/3", "π/6"],
-["90°", "0", "π/3", "π/6"],
-["120°", "0", "π/3", "π/6"],
-["135°", "0", "π/3", "π/6"],
-["150°", "0", "π/3", "π/6"],
-["180°", "0", "π/3", "π/6"],
-["210°", "0", "π/3", "π/6"],
-["225°", "0", "π/3", "π/6"],
-["240°", "0", "π/3", "π/6"],
-["270°", "0", "π/3", "π/6"],
-["300°", "0", "π/3", "π/6"],
-["315°", "0", "π/3", "π/6"],
-["330°", "0", "π/3", "π/6"],
-["360°", "0", "π/3", "π/6"]
+["30°", "π/6", "3π/2", "7π/6"],
+["45°", "π/4", "π/3", "π/6"],
+["60°", "π/3", "2π/3", "π/2"],
+["90°", "π/2", "2π/6", "5π/3"],
+["120°", "2π/3", "π/3", "2π"],
+["135°", "3π/4", "π", "π/6"],
+["150°", "5π/6", "π/3", "5π/4"],
+["180°", "π", "2π", "π/2"],
+["210°", "7π/6", "2π/3", "π/6"],
+["225°", "5π/4", "5π/4", "π/3"],
+["240°", "4π/3", "π/2", "π/3"],
+["270°", "3π/2", "π", "6π/7"],
+["300°", "5π/3", "2π", "2π/3"],
+["315°", "7π/4", "π/4", "π/6"],
+["330°", "11π/6", "π/3", "2π/3"],
+["360°", "2π", "5π/3", "π/2"]
   
 ];
         //Clock    
@@ -91,9 +91,9 @@
      i++;
     if(i<items.length){
      document.getElementById("question").innerHTML="<center><div class='question'>"+items[A[i]][0]+"</div><div class='myItems'><div class='choice' id='correctAnswer' onclick='correct(this);'><br>"+items[A[i]][1]+"</div><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>"+items[A[i]][2]+"</div><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>"+items[A[i]][3]+"</div></center><br>";
-       //  $(".myItems").html($(".myItems .choice").sort(function(){
-    //return Math.random()-0.5;
-//}));
+       $(".myItems").html($(".myItems .choice").sort(function(){
+    return Math.random()-0.5;
+}));
     } 
 
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
