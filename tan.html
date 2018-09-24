@@ -30,7 +30,7 @@
 ["3π /4", "-1", "0", "1/2"],
 ["5π /6", "-√3/3", "√2/2", "1"],
 ["π", "0", "UND", "1"],
-["7π /6", "√3/3", "√2/3", "√3/3"],
+["7π /6", "√3/3", "√2/3", "-√3/3"],
 ["5π /4", "1", "0", "√2/2"],
 ["4π /3", "√3", "-√3/3", "√3/3"],
 ["3π /2", "UND", "1", "1/2"],
@@ -55,7 +55,6 @@
     function getRandomArray(min,max){
     var A= [];
     while(max>= min) A.push(max--)    
-
     A.sort(function(){return .5- Math.random()});  
 		this.A = A;
     return A;
@@ -69,7 +68,6 @@
         pointValue = pointValue + 10;
         document.getElementById("points").innerHTML=(parseInt(pointValue)+"pts&nbsp;&nbsp;&nbsp;&nbsp;");
         element.onclick = function() {myFunction()};
-
         
     }
     //Detects Incorrrect Answer
@@ -95,15 +93,12 @@
     return Math.random()-0.5;
 }));
     } 
-
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
      document.getElementById("next").style.visibility = "hidden";
      clearInterval(timer);}
     }
         
-
              
-
   
     </script>
        </body>

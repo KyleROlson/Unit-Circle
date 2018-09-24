@@ -4,17 +4,15 @@
     src: url('fonts/Cheveuxdange.eot?#iefix') format('embedded-opentype'),
         url('fonts/Cheveuxdange.ttf') format('truetype'),
         url('fonts/Cheveuxdange.svg#Cheveuxdange') format('svg');
-    font-weight: 500;
-    font-style: normal;
+    font-style: bold;
 }
 @font-face {
     font-family: 'Tequila';
     src: url('fonts/Tequila.eot');
     src: url('fonts/Tequila.eot?#iefix') format('embedded-opentype'),
         url('fonts/Tequila.ttf') format('truetype'),
-        url('fonts/Tequila.svg') format('svg');
-    font-weight: 500;
-    font-style: normal;
+        url('fonts/Tequila.svg#Tequila') format('svg');
+    font-style: lighter;
 }
 
 
@@ -24,7 +22,7 @@ header{
     
 }
 body{
-     background-image: url(images/graph.svg);
+     /*background-image: url(images/graph.svg);*/
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -138,4 +136,3 @@ a{
     margin-bottom: -50;
     font-family: Cheveuxdange,Tequila;
 }
-
