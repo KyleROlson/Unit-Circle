@@ -1,13 +1,21 @@
 @font-face {
     font-family: 'Cheveuxdange';
-    src: url('Cheveuxdange.eot');
-    src: url('Cheveuxdange.eot?#iefix') format('embedded-opentype'),
-        url('Cheveuxdange.ttf') format('truetype'),
-        url('Cheveuxdange.svg#Cheveuxdange') format('svg');
+    src: url('fonts/Cheveuxdange.eot');
+    src: url('fonts/Cheveuxdange.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Cheveuxdange.ttf') format('truetype'),
+        url('fonts/Cheveuxdange.svg#Cheveuxdange') format('svg');
     font-weight: 500;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Tequila';
+    src: url('fonts/Tequila.eot');
+    src: url('fonts/Tequila.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Tequila.ttf') format('truetype'),
+        url('fonts/Tequila.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
 
 
 header{
@@ -116,82 +124,18 @@ a{
     text-decoration: none;
 }
 #question{
-   font-family: Cheveuxdange; 
+   font-family: Cheveuxdange;
 }
 .question{
     font-size: 650%;
-    margin-top: -75
+    margin-top: -90;
+    margin-bottom: 0;
+    font-family: Cheveuxdange,Tequila;
+}
+.questionRadian{
+    font-size: 650%;
+    margin-top: -110;
+    margin-bottom: -50;
+    font-family: Cheveuxdange,Tequila;
 }
 
-
-/*@media screen and (-webkit-min-device-pixel-ratio:1.1) {
-    _:-webkit-full-screen, .selector { property:value; } 
-    
-    
-    
-
-
-header{
-    height: 20%;
-    
-}
-body{
-     background-image: url(images/graph.svg);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden
-}
-#playButton{
-    background-image: url(images/red.png);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 20%;
-  width:90%;
-  border-radius: 20%;
-  font-family: HandWritten;
-  font-size: 150%;
-  margin-left: 25%;
-}
-#highButton{
-    background-image: url(images/blue.png);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 20%;
-  width:90%;
-  border-radius: 20%;
-  margin-left: 25%;
-}
-footer{
-    position: absolute;
-    bottom: -30%;
-   
-}
-#timer{
-    position: absolute;
-    right: 3%;
-    top: 0%;
-    font-family: cursive;
-    font-size: 200%;
-    color: grey;
-}
-#unitCircle{
-    width: 50%;
-    height: 100%;
-    position: absolute;
-}
-#answer{
-    width: 100%;
-    height: 60%;
-    position: absolute
-}
-
-
-
-
-}
