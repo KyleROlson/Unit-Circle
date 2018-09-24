@@ -1,18 +1,10 @@
 # Unit Circle Game
-###### Started 4/21/2018
+###### Started 9/23/2018
 
   
 ### Project Description:
-This is an interactive unit circle. Once completed, it will feature multiple modes.
-* Type Unit Circle, the user must type in the correct answer to blanks in the unit circle.
-* Multiple Choice Unit Circle, the user must select the correct answer to blanks from 4 different choices.
-* Type Flash Cards, the user will be presented with a "flash card" of sine or cosine and must type in the answer.
+This is a web app written with HTML, JavaScript and CSS to help memorize and quiz understanding of the Unit Circle, or special angles. Upon the initial release, it features 4 different levels, degrees to radians, sine, cosine, and tangent. However, this code is easily changed to accomodate more questions or can even feature different questions entirely.
 
-It will utilize a distinct UI with graphics that look like they were pencilled into a notebook.
-
-### Task List:
-* Create UI
-* Write JavaScript to check answers.
-* Wire Javascript to Buttons
-* Create High Score Database
-* Mobile apps?
+### Future Updates:
+Create a local store database.
+Create a drag and drop mode where the numbers are moved into their respective locations on the unit circle.
