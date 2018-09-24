@@ -88,7 +88,7 @@
     function nextQuestion(){
      i++;
     if(i<items.length){
-     document.getElementById("question").innerHTML="<center><div class='questionRadian'>"+items[A[i]][0]+"</div><br><div class='myItems'><div class='choice' id='correctAnswer' onclick='correct(this);'>"+items[A[i]][1]+"</div><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'>"+items[A[i]][2]+"</div><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'>"+items[A[i]][3]+"</div></center><br>";
+     document.getElementById("question").innerHTML="<center><div class='questionRadian'>"+items[A[i]][0]+"</div><br><div class='myItems'><div class='choice' id='correctAnswer' onclick='correct(this);'><br>"+items[A[i]][1]+"</div><br> <div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>"+items[A[i]][2]+"</div><br><div class='choice' id='wrongAnswer' onclick='incorrect(this);'><br>"+items[A[i]][3]+"</div></center><br>";
        $(".myItems").html($(".myItems .choice").sort(function(){
     return Math.random()-0.5;
 }));
