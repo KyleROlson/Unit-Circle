@@ -7,4 +7,5 @@ This is a web app written with HTML, JavaScript and CSS to help memorize and qui
 
 ### Future Updates:
 Create a local store database.
+
 Create a drag and drop mode where the numbers are moved into their respective locations on the unit circle.
