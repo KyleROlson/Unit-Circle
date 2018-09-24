@@ -12,7 +12,7 @@
     src: url('fonts/Tequila.eot');
     src: url('fonts/Tequila.eot?#iefix') format('embedded-opentype'),
         url('fonts/Tequila.ttf') format('truetype'),
-        url('fonts/Tequila.svg') format('svg');
+        url('fonts/Tequila.svg#Tequila') format('svg');
     font-weight: 500;
     font-style: normal;
 }
