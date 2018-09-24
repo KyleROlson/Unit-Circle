@@ -5,7 +5,7 @@
         url('fonts/Cheveuxdange.ttf') format('truetype'),
         url('fonts/Cheveuxdange.svg#Cheveuxdange') format('svg');
     font-weight: 500;
-    font-style: normal;
+    font-style: bold;
 }
 @font-face {
     font-family: 'Tequila';
