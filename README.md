@@ -1,8 +1,9 @@
 # Unit Circle Game
 ###### Started 9/23/2018
 
-### Screenshot:
+### Screenshots:
 ![Screenshot](https://kylerolson.github.io/Unit-Circle/Screenshot.png)
+![Screenshot](https://kylerolson.github.io/Unit-Circle/Screenshot2.png)
 
   
 ### Project Description:
