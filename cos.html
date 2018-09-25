@@ -95,7 +95,22 @@
     } 
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
      document.getElementById("next").style.visibility = "hidden";
-     clearInterval(timer);}
+     clearInterval(timer);
+    if ("cosTime" in localStorage){
+    if(sec<localStorage.getItem("cosTime") &&pointValue>localStorage.getItem("cosPoint") ){
+        localStorage.setItem("cosTime", sec);
+    localStorage.setItem("cosPoint", pointValue);                                                                     
+    }
+    }
+    else
+    {
+        localStorage.setItem("cosTime", sec);
+    localStorage.setItem("cosScore", pointValue);
+    }     
+         }
+        
+         
+         
     }
         
              

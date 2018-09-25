@@ -100,7 +100,7 @@
      document.getElementById("next").style.visibility = "hidden";
      clearInterval(timer);
     if ("degTime" in localStorage){
-    if(sec<localStorage.getItem("degTime") &&pointValue>localStorage.getItem("degTime") ){
+    if(sec<localStorage.getItem("degTime") &&pointValue>localStorage.getItem("degPoint") ){
         localStorage.setItem("degTime", sec);
     localStorage.setItem("degPoint", pointValue);
                                                                          

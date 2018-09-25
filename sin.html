@@ -95,7 +95,19 @@
     } 
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
      document.getElementById("next").style.visibility = "hidden";
-     clearInterval(timer);}
+     clearInterval(timer);
+    if ("sinTime" in localStorage){
+    if(sec<localStorage.getItem("sinTime") &&pointValue>localStorage.getItem("sinPoint") ){
+        localStorage.setItem("sinTime", sec);
+    localStorage.setItem("sinPoint", pointValue);                                                                     
+    }
+    }
+    else
+    {
+        localStorage.setItem("sinTime", sec);
+    localStorage.setItem("sinScore", pointValue);
+    }     
+         }
     }
         
              

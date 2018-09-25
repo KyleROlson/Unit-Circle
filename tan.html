@@ -95,7 +95,22 @@
     } 
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
      document.getElementById("next").style.visibility = "hidden";
-     clearInterval(timer);}
+     clearInterval(timer);
+    if ("tanTime" in localStorage){
+    if(sec<localStorage.getItem("tanTime") &&pointValue>localStorage.getItem("tanPoint") ){
+        localStorage.setItem("tanTime", sec);
+    localStorage.setItem("tanPoint", pointValue);                                                                     
+    }
+    }
+    else
+    {
+        localStorage.setItem("tanTime", sec);
+    localStorage.setItem("tanScore", pointValue);
+    }     
+         
+       
+         
+         }
     }
         
              
