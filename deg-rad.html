@@ -31,7 +31,7 @@
 ["150°", "5π/6", "π/3", "5π/4"],
 ["180°", "π", "2π", "π/2"],
 ["210°", "7π/6", "2π/3", "π/6"],
-["225°", "5π/4", "-3π/4", "π/3"],
+["225°", "5π/4", "5π/4", "π/3"],
 ["240°", "4π/3", "π/2", "π/3"],
 ["270°", "3π/2", "π", "6π/7"],
 ["300°", "5π/3", "2π", "2π/3"],
@@ -98,13 +98,27 @@
 
      else{document.getElementById("question").innerHTML="<div class='endScreen'><center><h1>You earned a score of " + pointValue + ". Feel fee to keep practicing or move on.</h1><br>";
      document.getElementById("next").style.visibility = "hidden";
-     clearInterval(timer);}
+     clearInterval(timer);
+    if ("degTime" in localStorage){
+    if(sec<localStorage.getItem("degTime") &&pointValue>localStorage.getItem("degTime") ){
+        localStorage.setItem("degTime", sec);
+    localStorage.setItem("degPoint", pointValue);
+                                                                         
+                                                                         }
+                                                                                                                                              }
+    else
+    {
+        localStorage.setItem("degTime", sec);
+    localStorage.setItem("degScore", pointValue);
     }
+    }
+}
         
 
              
 
   
     </script>
+        
        </body>
 </html>
