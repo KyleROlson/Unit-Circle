@@ -1,0 +1,60 @@
+<html>
+<head>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Unit Circle</title>
+</head>    
+    <body onLoad="timer()">
+       <header><a href = "game.html"><img src="images/arrow.png"></header></a>
+       <center>
+           <table cellpadding="20">
+<tbody>
+<tr>
+    <strong>
+<td>Level</td>
+<td>Score</td>
+<td>Time</td>
+    </strong>
+</tr>
+<tr>
+<td>Degrees to Radians</td>
+<td id="degScore">&nbsp;</td>
+<td id="degTime">&nbsp;</td>
+</tr>
+<tr>
+<td>SIN</td>
+<td id="sinScore">&nbsp;</td>
+<td id="sinTime">&nbsp;</td>
+</tr>
+<tr>
+<td>COS</td>
+<td id="cosScore">&nbsp;</td>
+<td id="cosTime">&nbsp;</td>
+</tr>
+<tr>
+<td>TAN</td>
+<td id="tanScore">&nbsp;</td>
+<td id ="tanTime">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+       </center>
+       
+    </body>
+    <script>
+    document.getElementById("degScore").innerHTML = localStorage.getItem("degScore") +"pts";
+    document.getElementById("degTime").innerHTML = localStorage.getItem("degScore")+"s";
+        
+     document.getElementById("sinScore").innerHTML = localStorage.getItem("sinScore") +"pts";
+    document.getElementById("sinTime").innerHTML = localStorage.getItem("sinScore")+"s";
+        
+        
+     document.getElementById("tanScore").innerHTML = localStorage.getItem("tanScore") +"pts";
+    document.getElementById("tanTime").innerHTML = localStorage.getItem("tanScore")+"s";
+        
+     document.getElementById("cosScore").innerHTML = localStorage.getItem("cosScore") +"pts";
+    document.getElementById("cosTime").innerHTML = localStorage.getItem("cosScore")+"s";    
+    </script>
+</html>
