@@ -12,6 +12,9 @@ This is a web app written with HTML, JavaScript and CSS to help memorize and qui
 ### Release:
 The app can be viewed by going to circle.techykyle.com. It can also be used as a standalone app by adding it to the homescreen on both iOS and Android devices.
 
+Update: Now available on the Google Play Store
+https://play.google.com/store/apps/details?id=com.techykyle.circle
+
 ### Future Updates:
 Create a local store database.
 
